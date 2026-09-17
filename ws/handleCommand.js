@@ -1,17 +1,24 @@
-import { importData } from "tally-xml-tdl";
+import handleLast from "./commands/last.js";
+import handleLedgerNames from "./commands/ledgerNames.js";
+
+const handlers = {
+    LAST: handleLast,
+    GET_LAST_VOUCHER: handleLast,
+    GET_LEDGER_NAMES: handleLedgerNames
+};
 
 export const handleCommand = async (message) => {
 
-    if (message === "last") {
+    const command =
+        typeof message === "string"
+            ? { action: message }
+            : message;
 
-        const data = await importData.transaction.last({
-            company: "Mani9"
-        });
+    const handler = handlers[command.action];
 
-        console.log("Tally response:", data);
-
-        return;
+    if (!handler) {
+        throw new Error(`Unknown command: ${command.action}`);
     }
 
-    console.log("Unknown command:", message);
+    return await handler(command);
 };

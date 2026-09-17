@@ -1,6 +1,6 @@
 import { handleCommand } from "./handleCommand.js";
 
-export const handleMessage = (data) => {
+export const handleMessage = async (ws, data) => {
 
     const text = data.toString();
 
@@ -14,5 +14,23 @@ export const handleMessage = (data) => {
 
     console.log("Received from server:", message);
 
-    handleCommand(message);
+    try {
+
+        const result = await handleCommand(message);
+
+        ws.send(JSON.stringify({
+            requestId: message.requestId,
+            success: true,
+            data: result
+        }));
+
+    } catch (error) {
+
+        ws.send(JSON.stringify({
+            requestId: message.requestId,
+            success: false,
+            message: error.message
+        }));
+
+    }
 };
