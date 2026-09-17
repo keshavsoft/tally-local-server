@@ -1,9 +1,10 @@
+import "dotenv/config";
 import WebSocket from "ws";
 import { handleMessage } from "./handleMessage.js";
 
 export const connect = () => {
 
-    const ws = new WebSocket("ws://localhost:8080");
+    const ws = new WebSocket(process.env.WS_URL);
 
     ws.on("open", () => {
         console.log("Connected to cloud server");
