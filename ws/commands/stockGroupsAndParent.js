@@ -1,13 +1,7 @@
-import masters from "tally-xml-tdl";
-// import { get, clean } from "../../../src/v6/index.js";
+import { masters } from "tally-xml-tdl";
 
 const startFunc = async (command) => {
-
-    const data = await masters.clean({
-        company: "mani9", jsonId: "stockGroupsAndParent"
-    });
-
-    console.log("LAST:", data);
+    const data = await masters.clean("mani9", "stockGroupsAndParent");
 
     return data;
 };

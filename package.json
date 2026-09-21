@@ -13,7 +13,7 @@
   "type": "module",
   "dependencies": {
     "dotenv": "^17.4.2",
-    "tally-xml-tdl": "^1.13.3",
+    "tally-xml-tdl": "^1.15.2",
     "ws": "^8.21.3"
   }
 }
