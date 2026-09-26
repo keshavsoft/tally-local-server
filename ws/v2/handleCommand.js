@@ -1,6 +1,7 @@
 import company from "./commands/company.js";
 import handleLast from "./commands/last.js";
 import { Unit, StockItem, Ledger, StockGroup } from "./commands/masters/index.js";
+import vouchers from "./commands/vouchers/index.js";
 
 const handlers = {
     // Company & Utility
@@ -55,7 +56,17 @@ const handlers = {
     "StockGroup.all": StockGroup.all,
     "masters.StockGroup": StockGroup.all,
     StockGroup: StockGroup.all,
-    stockGroups: StockGroup.all
+    stockGroups: StockGroup.all,
+
+    // Vouchers - Purchases
+    "vouchers.purchases.period": vouchers.purchases.period,
+    "Vouchers.Purchases.period": vouchers.purchases.period,
+    "purchases.period": vouchers.purchases.period,
+    "vouchers.purchases.all": vouchers.purchases.all,
+    "Vouchers.Purchases.all": vouchers.purchases.all,
+    "purchases.all": vouchers.purchases.all,
+    "vouchers.purchases": vouchers.purchases.all,
+    "purchases": vouchers.purchases.all
 };
 
 export const handleCommand = async (message) => {
