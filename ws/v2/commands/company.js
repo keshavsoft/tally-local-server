@@ -1,4 +1,4 @@
-import { company } from "tally-xml-tdl";
+import { company } from "tally-to-json";
 
 const startFunc = async (command) => {
     const data = await company();

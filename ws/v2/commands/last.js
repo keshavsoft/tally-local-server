@@ -1,4 +1,4 @@
-import { company } from "tally-xml-tdl";
+import { company } from "tally-to-json";
 // import { get, clean } from "../../../src/v6/index.js";
 
 const startFunc = async (command) => {

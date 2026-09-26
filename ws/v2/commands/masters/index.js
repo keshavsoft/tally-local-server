@@ -1,0 +1,49 @@
+import unitAll from "./Unit/all.js";
+import stockItemAll from "./StockItem/all.js";
+import stockItemWithBaseUnits from "./StockItem/withBaseUnits.js";
+import stockItemWithBatches from "./StockItem/withBatches.js";
+import ledgerAll from "./Ledger/all.js";
+import ledgerWithDetails from "./Ledger/withDetails.js";
+import ledgerWithGstDetails from "./Ledger/withGstDetails.js";
+import stockGroupAll from "./StockGroup/all.js";
+import stockGroupWithParent from "./StockGroup/withParent.js";
+
+const Unit = {
+    all: unitAll,
+    names: unitAll
+};
+
+const StockItem = {
+    all: stockItemAll,
+    names: stockItemAll,
+    withBaseUnits: stockItemWithBaseUnits,
+    withBatches: stockItemWithBatches
+};
+
+const Ledger = {
+    all: ledgerAll,
+    names: ledgerAll,
+    withDetails: ledgerWithDetails,
+    withGstDetails: ledgerWithGstDetails,
+    moreDetails: ledgerWithGstDetails
+};
+
+const StockGroup = {
+    all: stockGroupAll,
+    names: stockGroupAll,
+    withParent: stockGroupWithParent
+};
+
+export {
+    Unit,
+    StockItem,
+    Ledger,
+    StockGroup
+};
+
+export default {
+    Unit,
+    StockItem,
+    Ledger,
+    StockGroup
+};

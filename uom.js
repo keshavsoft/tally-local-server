@@ -1,11 +1,9 @@
-import { masters } from "tally-xml-tdl";
+import { masters } from "tally-to-json";
 
 const startFunc = async (command) => {
-
     console.log("-----", masters);
 
-
-    const data = await masters.clean("mani9", "uom");
+    const data = await masters.Unit("mani9");
 
     console.log("LAST:", data);
 
