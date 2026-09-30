@@ -13,7 +13,7 @@
   "type": "module",
   "dependencies": {
     "dotenv": "^17.4.2",
-    "tally-to-json": "^1.12.7",
+    "tally-company": "^1.6.2",
     "ws": "^8.21.3"
   }
 }

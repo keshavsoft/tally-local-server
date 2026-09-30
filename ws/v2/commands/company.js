@@ -1,4 +1,4 @@
-import { company } from "tally-to-json";
+import company from "tally-company";
 
 const startFunc = async (command) => {
     const data = await company();
