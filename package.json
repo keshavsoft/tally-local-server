@@ -12,9 +12,11 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@keshavsoft/json-transformer": "^1.7.1",
     "dotenv": "^17.4.2",
     "tally-company": "^1.6.2",
     "tally-masters": "^1.5.2",
+    "tally-simple": "^1.8.4",
     "ws": "^8.21.3"
   }
 }
