@@ -19,9 +19,12 @@ export const handleCommand = async (inParams) => {
     const localRoute = localAction.startsWith("tally.")
         ? localAction
         : `tally.${localAction}`;
-    console.log("localRoute : ", localRoute, localCompany);
+    // console.log("localRoute : ", localRoute, localCompany);
 
-    return await call(localRoute, localCompany);
+    const fromCall = await call(localRoute, localCompany);
+    // console.log("fromCall : ", fromCall);
+
+    return await fromCall;
 };
 
 export default handleCommand;
