@@ -1,3 +1,3 @@
-import { connect } from "./ws/v4/connect.js";
+import { connect } from "./ws/v5/connect.js";
 
 connect();

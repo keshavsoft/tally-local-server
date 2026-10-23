@@ -16,7 +16,7 @@
     "dotenv": "^17.4.2",
     "tally-company": "^1.6.2",
     "tally-masters": "^1.5.2",
-    "tally-simple": "^1.13.3",
+    "tally-simple": "^1.14.1",
     "ws": "^8.21.3"
   }
 }
